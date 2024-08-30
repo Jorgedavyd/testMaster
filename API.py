@@ -6,7 +6,7 @@ import pandas as pd
 import aioftp
 
 class API:
-    def __init__(self, ftp: str) -> None:
+    def __init__(self) -> None:
         self.ftp: str = ftp
 
     async def download_url(self, url: str):

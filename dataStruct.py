@@ -1,15 +1,10 @@
 from datetime import datetime
 from dataclasses import dataclass
-from typing import Any, Dict,List, Tuple
-import aiofiles
-import json
-import pandas as pd
+from typing import Any, Dict,List
 
-@dataclass
 class Name:
-    filepath: str
-
-    def __post_init__(self) -> None:
+    def __init__(self, filepath: str) -> None:
+        self.filepath: str = filepath
         self.postProcess()
 
     def postProcess(self) -> None:
